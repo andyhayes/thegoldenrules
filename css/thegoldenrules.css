@@ -1,0 +1,62 @@
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+footer {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ccc;
+    float: right;
+}
+
+.carousel .item {
+    border: 0px solid #ccc;
+}
+
+.carousel .carousel-control {
+    display: none;
+    opacity: 0.2;
+}
+
+.carousel:hover .carousel-control {
+    display: inherit;
+}
+
+.carousel .carousel-caption {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.tgr-heading {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.tgr-rule {
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    height: 256px;
+    font-size: 36px;
+}
+
+.tgr-caption {
+    font-size: 18px;
+
+}
+
+.tgr-dropcap {
+    display: block;
+    float: left;
+    margin: -6px 8px 0 0;
+    min-height: 50px;
+	font-size: 80px;
+	color: #000;
+}
+
+.golden {
+    color: #ffd700;
+}
+
+.bold {
+    font-weight: bold
+}
