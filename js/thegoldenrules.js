@@ -1,5 +1,4 @@
 function checkIsFirstRule() {
-    console.log("checkIsFirstRule: " + this.number);
     if (this.number === "1") {
         return 'active';
     }
@@ -7,7 +6,6 @@ function checkIsFirstRule() {
 }
 
 function getFirstLetterOfDescription(description) {
-    console.log("getFirstChar: " + this.description);
     return this.description.slice(0, 1);
 }
 
