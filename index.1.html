@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="ng-app">
+<head>
+    <meta charset="utf-8">
+    <title>The Golden Rules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Golden Rules: Do it the right way!">
+    <meta name="author" content="fearofmachines.com">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/thegoldenrules.css" rel="stylesheet">
+    <link href="css/mb.css" rel="stylesheet">
+    <script type="text/javascript" src="http://use.typekit.com/cpu6lmn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+<div class="container">
+    <div class="tgr-heading">The <span class="golden bold">Golden</span> Rules of...contracting</div>
+    <div class="row-fluid" ng-controller="TheRulesCtrl">
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item {{rule.active()}}" ng-repeat="rule in goldenrules">
+                    <div class="carousel-caption"><p class="tgr-caption">{{rule.number}}. {{rule.name}}</p></div>
+                    <div class="tgr-rule">
+                        <p><span class="tgr-dropcap">{{rule.dropCap()}}</span>{{rule.text()}}</p>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+    <!--
+    <div class="mb-wrap mb-style-3">
+        <div class="mb-thumb"></div>
+        <blockquote cite="http://www.gutenberg.org/ebooks/1257">
+            <p>Never fear quarrels, but seek hazardous adventures.</p>
+        </blockquote>
+        <div class="mb-attribution">
+            <p class="mb-author">Alexandre Dumas</p>
+            <cite><a href="http://www.gutenberg.org/ebooks/1257">The Three Musketeers</a></cite>
+        </div>
+    </div>
+    -->
+    <footer> About | Add Rule | &copy; 2012 fearofmachines.com </footer>
+</div>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/thegoldenrules.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/angular-1.0.1.min.js"></script>
+<script type="text/javascript">
+    angular.element(document).ready(function() {
+        $(".carousel").carousel({interval: 7000});
+    });
+</script>
+</body>
+</html>
