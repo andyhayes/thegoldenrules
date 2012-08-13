@@ -1,15 +1,68 @@
+/** STYLE 2 **/
+.mb-style-2 blockquote{
+    padding-top: 150px;
+}
+
+.mb-style-2 blockquote:before{
+    content: '';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border-left: 5px solid rgba(235,150,108,0.1);
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    z-index: -1;
+}
+
+.mb-style-2 blockquote p {
+    font-family: Baskerville, Georgia, serif;
+    font-size: 28px;
+    font-style: italic;
+    background: rgba(255,255,255,0.5);
+    display: inline;
+    color: rgba(235,150,108,0.8);
+    text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+    line-height: 46px;
+    box-shadow: 0 -6px 0 rgba(235,150,108,0.2);
+}
+
+.mb-style-2 .mb-attribution {
+    text-align: right;
+}
+ 
+.mb-style-2 .mb-author{
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #d48158;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+ 
+.mb-style-2 cite a{
+    color: #d7aa94;
+    font-style: italic;
+}
+ 
+.mb-style-2 cite a:hover{
+    color: #d48158;
+}
+
 
 /** STYLE 3 **/
 
 .mb-style-3 {
-    width: 960px;
+    width: 500px;
 }
  
 .mb-style-3 blockquote{
     background: #fff;
     padding: 30px;
-    border: 0px solid #333;
     border-radius: 5px;
+    box-shadow: 
+        inset 0 2px 0 rgba(188, 147, 200, 0.7), 
+        -5px -4px 25px rgba(0, 0, 0, 0.3);
 }
 
 .mb-style-3 blockquote:after, 
@@ -39,8 +92,8 @@
 
 .mb-style-3 blockquote p {
     font-family: 'Alegreya', serif;
-    font-size: 36px;
-    color: #333;
+    font-size: 24px;
+    color: #b4b4b4;
     font-weight: 400;
     line-height: 40px;
     font-style: italic;
@@ -57,8 +110,8 @@
     font-size: 175px;
     top: 0px;
     left: -105px;
-    color: #ffd700;
-   /* text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1); */
+    color: rgba(188, 147, 200, 1);
+    text-shadow: 7px 14px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mb-style-3 .mb-attribution {

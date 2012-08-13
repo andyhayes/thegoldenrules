@@ -29,14 +29,14 @@ function TheRulesCtrl($scope) {
             text: getRestOfDescription,
             number: "2",
             name: "You are not really ill",
-            description: "You don't want to get out of bed. However, you can't let your team down. Get yourself to work. Unless you are dead, then you can take the day off."
+            description: "Oh no, you are feeling blue and you don't want to get out of bed. However, you can't let your team down. Get yourself to work. Unless you are dead, then you can take the day off."
         },
         {   active: checkIsFirstRule,
             dropCap: getFirstLetterOfDescription,
             text: getRestOfDescription,
             number: "3",
             name: "Don't take too many holidays",
-            description: "Taking holidays is stressful enough when you have to spend time with your loved ones. Not getting paid while doing so really twists the knife."
+            description: "Taking holidays is stressful enough as you have to spend time with your loved ones. Not getting paid while doing so really twists the knife."
         }
     ]
 }
