@@ -20,7 +20,6 @@ footer {
 
 .carousel:hover .carousel-control {
     display: inherit;
-
 }
 
 .carousel .carousel-caption {
@@ -28,17 +27,16 @@ footer {
     margin-bottom: 32px;
 }
 
+.carousel .item {
+    height: 360px;
+    border-bottom: 1px solid #ccc;
+}
+
 .tgr-heading {
     font-size: 24px;
     margin-bottom: 24px;
 }
 
-.tgr-rule {
-    border-bottom: 1px solid #ccc;
-    background-color: white;
-    height: 256px;
-    font-size: 36px;
-}
 
 .tgr-caption {
     font-size: 24px;
