@@ -79,7 +79,7 @@ function TheRulesCtrl($scope) {
             text: getRestOfDescription,
             number: "8",
             name: "Dig that tunnel for your friends",
-            description: "So you have landed a new contract and they are need more contractors. Don't forget to recommend the rest of us, as what goes round comes around"
+            description: "So you have landed a new contract and they are looking more contractors. Don't forget to recommend the rest of us, as what goes round comes around!"
         },
         {   
             active: checkIsFirstRule,
