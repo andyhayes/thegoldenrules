@@ -7,6 +7,7 @@ footer {
     font-size: 12px;
     color: #ccc;
     float: right;
+    clear:both;
 }
 
 .carousel .item {
@@ -59,4 +60,10 @@ footer {
 
 .bold {
     font-weight: bold
+}
+
+.social-media-links {
+    float:right;
+    padding: 0 0 0 0;
+    margin-bottom:16px;
 }
