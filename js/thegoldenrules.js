@@ -38,7 +38,7 @@ function TheRulesCtrl($scope) {
             dropCap: getFirstLetterOfDescription,
             text: getRestOfDescription,
             number: "3",
-            name: "Do your job well, but don't be a hero",
+            name: "Hell is for heroes",
             description: "You were hired because you're a professional and have valuable skills. Do your job, but be wary of making that last minute change or fixing something that aint broke. Chances are it will come back and bite you in the ass."
         },
         {   
@@ -94,8 +94,8 @@ function TheRulesCtrl($scope) {
             dropCap: getFirstLetterOfDescription,
             text: getRestOfDescription,
             number: "10",
-            name: "Be sensitive!!!",
-            description: "Don't keep harping on about your rate or why you think being a permie is bad. Everyone has their own goals and you don't want to make the natives restless."
+            name: "Be sensitive!",
+            description: "Don't keep harping on about your rate or why you think being a permie is bad. Each to their own."
             
         }
     ]
