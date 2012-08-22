@@ -95,7 +95,7 @@ function TheRulesCtrl($scope) {
             text: getRestOfDescription,
             number: "10",
             name: "Be sensitive!",
-            description: "Don't keep harping on about your rate or why you think being a permie is bad. Each to their own."
+            description: "Don't keep harping on about your daily rate or why you think being a permie is bad. It's not clever and will only serve to annoy your colleagues. Be happy!"
             
         }
     ]
