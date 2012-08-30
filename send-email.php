@@ -47,10 +47,10 @@ if (array_key_exists('error', $data)) {
 
 // Check, if message sent to your email display message "We've recived your information"
 if($sendResult) {
+    $data['status'] = "success";
+} else {
     $data['status'] = "error";
     $data['error'] = "Send mail error";
-} else {
-     $data['status'] = "success";
 }
 
 echo json_encode($data);
