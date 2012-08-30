@@ -27,16 +27,16 @@ $validationErrors=False;
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
-    $validationErrors = False;
+    $validationErrors = True;
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         error_log("detected empty field");
         $data['status'] = "error";
         $data['error'] = 'You must enter rule name and rule text';
-        $validationErrors = False;
+        $validationErrors = True;
     }
 }
-error_log("VALID 1= $valid");
+error_log("VALID 1= $validationErrors");
 if (!$validationErrors) {
     error_log("aaaaaaa");
     $sendResult=mail($to, $subject, $message, $from);
