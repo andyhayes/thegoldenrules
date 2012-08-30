@@ -14,7 +14,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 $referrer = str_replace('http:', '', $_SERVER['HTTP_REFERER']);
 $referrer = str_replace('/', '', $referrer);
 
-$message="Rule name: $ruleName\nRule text: $ruleText\n\nEmail: $ruleEmail\n$referrer";
+$message="Rule name: $ruleName\nRule text: $ruleText\n\nEmail: $ruleEmail";
 
 $data = array();
 $data['method'] = $method;
@@ -28,6 +28,7 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
     $validationErrors = True;
+    error_log("bad sendmail referrer: $referrer");
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         error_log("detected empty field");
