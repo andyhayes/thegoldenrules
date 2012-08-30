@@ -2,8 +2,8 @@
 
 error_reporting(E_ALL ^ E_NOTICE);
 
-
-$errors = array();
+$error = "";
+$data = array();
 
 // Contact subject
 $ruleName ="$rule-name"; 
@@ -22,16 +22,23 @@ $to ='ayub.malik@gmail.com';
 
 $message="Rule name: $ruleName \n Rule text: $ruleText \n\n Email: $ruleEmail";
 
+$method = $_SERVER['REQUEST_METHOD'];
+$referrer =  $_SERVER['HTTP_REFERER'];
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET' || $_SERVER['HTTP_REFERER'] != 'www.thegoldenrules.co.uk') {
-    $errors[]= "GET not supported/Invalide referrer";
+$data['method'] = $method;
+$data['referrer'] = $referrer;
+
+if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
+    $data['status'] = "error";
+    $data['error'] = "GET not supported/Invalid referrer";
 } else {
     if (empty($ruleName) || empty($ruleText)) { 
-        $errors[] = 'You must enter rule name and rule text';
+        $data['status'] = "error";
+        $data['error']  = 'You must enter rule name and rule text';
     }
 }
 
-if (!$errors) {
+if (!$data['error']) {
     $sendResult=mail($to, $subject, $message);
 } else {
     $sendResult=false;
@@ -39,10 +46,11 @@ if (!$errors) {
 
 // Check, if message sent to your email display message "We've recived your information"
 if($sendResult) {
-    $data = "{status:'success'}";
+    $data['status'] = "error";
+    $data['error'] = "Send mail error";
 } else {
-    $data = "{status:'error', message:'" . $errors[0] . "'}";
+     $data['status'] = "succes";
 }
 
-echo $data;
+echo json_encode($data);
 ?>
