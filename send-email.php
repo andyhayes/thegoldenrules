@@ -35,7 +35,7 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
         $valid = FALSE;
     }
 }
-error_log("VALID = $valid")
+error_log("VALID = $valid");
 if ($valid) {
     error_log("aaaaaaa");
     $sendResult=mail($to, $subject, $message, $from);
