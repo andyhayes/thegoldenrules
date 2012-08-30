@@ -33,7 +33,7 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
 } else {
-    if (empty($ruleName) || empty($ruleText)) { 
+    if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         $data['status'] = "error";
         $data['error'] = 'You must enter rule name and rule text';
     }
@@ -50,7 +50,7 @@ if($sendResult) {
     $data['status'] = "error";
     $data['error'] = "Send mail error";
 } else {
-     $data['status'] = "succes";
+     $data['status'] = "success";
 }
 
 echo json_encode($data);
