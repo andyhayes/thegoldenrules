@@ -125,7 +125,7 @@ function handlePostResponse(data) {
          return;
     } 
     
-    $(".modal-header .message").addClass("golden");
+    $(".modal-header .message").addClass("error");
     $(".modal-header .message").html(data.error);
 }
 
