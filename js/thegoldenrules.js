@@ -121,12 +121,11 @@ function handlePostResponse(data) {
     
     if (data.status === 'success') {
          $(".modal-header .message").html("Success!");
-         $(".modal-header .message").addClass("golden");
          setTimeout(hideModal, 2400);
          return;
     } 
     
-    $(".modal-header .message").addClass("error");
+    $(".modal-header .message").addClass("golden");
     $(".modal-header .message").html(data.error);
 }
 
