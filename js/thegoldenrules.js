@@ -118,8 +118,11 @@ function bindAddRule() {
 
 function handlePostResponse(data) {
     console.log(data);
+    if (data.status === 'error') {
+        $(".modal-header .message").html(data.error);
+    }
 }
 
 function submitNewRule() {
-    $.post('send-email.php', $('#add-rule-form').serialize(), handlePostResponse);
+    $.post('send-email.php', $('#add-rule-form').serialize(), handlePostResponse, 'json');
 }

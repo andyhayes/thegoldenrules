@@ -67,3 +67,8 @@ footer {
     padding: 0 0 0 0;
     margin-bottom:16px;
 }
+
+.error {
+    font-weight: bold;
+    font-color: #ff0000;
+}
