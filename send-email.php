@@ -37,17 +37,9 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     }
 }
 error_log("VALID 1= $validationErrors");
-$sendResult = false;
 if (!$validationErrors) {
     $sendResult=mail($to, $subject, $message, $from);
-} 
-
-// Check, if message sent to your email display message "We've recived your information"
-if($sendResult) {
     $data['status'] = "success";
-} else {
-    $data['status'] = "error";
-    $data['error'] = "Sorry, there was an error sending mail. Try laterz";
 }
 
 echo json_encode($data);
