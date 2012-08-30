@@ -23,7 +23,8 @@ $to ='ayub.malik@gmail.com';
 $message="Rule name: $ruleName \n Rule text: $ruleText \n\n Email: $ruleEmail";
 
 $method = $_SERVER['REQUEST_METHOD'];
-$referrer =  str_replace('http://', '', $_SERVER['HTTP_REFERER']);
+$referrer = str_replace('http:', '', $_SERVER['HTTP_REFERER']);
+$referrer = str_replace('/', '', $referrer);
 
 $data['method'] = $method;
 $data['referrer'] = $referrer;
