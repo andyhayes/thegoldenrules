@@ -118,7 +118,7 @@ function bindAddRule() {
 
 function handlePostResponse(data) {
     console.log(data);
-    
+    $(".modal-header .message").removeClass("error");
     if (data.status === 'success') {
          $(".modal-header .message").html("Success!");
          setTimeout(hideModal, 2400);
