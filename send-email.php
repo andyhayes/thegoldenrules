@@ -22,17 +22,17 @@ $data['referrer'] = $referrer;
 $data['ruleName'] = $ruleName;
 $data['ruleText'] = $ruleText;
 
-$valid = true;
+$valid = TRUE;
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
-    $valid = false;
+    $valid = FALSE;
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         error_log("detected empty field");
         $data['status'] = "error";
         $data['error'] = 'You must enter rule name and rule text';
-        $valid = false;
+        $valid = FALSE;
     }
 }
 
