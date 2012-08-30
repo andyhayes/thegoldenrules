@@ -2,34 +2,26 @@
 
 error_reporting(E_ALL);
 
-$error = "";
-$data = array();
+$ruleName=trim($_POST['rule-name']); 
+$ruleText=trim($_POST['rule-text']);
+$ruleEmail=trim($_POST['rule-email']);
 
-// Contact subject
-$ruleName=$_POST['rule-name']; 
-
-// Details
-$ruleText=$_POST['rule-text'];
-
-// Mail of sender
-$ruleEmail=$_POST['rule-email'];
-
-// subject
 $subject='New golden rule!';
-
-// Enter your email address
 $to ='ayub.malik@gmail.com';
-
 $from='From: info@www.thegoldenrules.co.uk';
-
-$message="Rule name: $ruleName \n Rule text: $ruleText \n\n Email: $ruleEmail";
 
 $method = $_SERVER['REQUEST_METHOD'];
 $referrer = str_replace('http:', '', $_SERVER['HTTP_REFERER']);
 $referrer = str_replace('/', '', $referrer);
 
+$message="Rule name: $ruleName\nRule text: $ruleText\n\nEmail: $ruleEmail\n$referrer";
+
+$data = array();
 $data['method'] = $method;
 $data['referrer'] = $referrer;
+$data['ruleName'] = $ruleName;
+$data['ruleText'] = $ruleText;
+
 
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
