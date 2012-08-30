@@ -23,7 +23,7 @@ $to ='ayub.malik@gmail.com';
 $message="Rule name: $ruleName \n Rule text: $ruleText \n\n Email: $ruleEmail";
 
 $method = $_SERVER['REQUEST_METHOD'];
-$referrer =  $_SERVER['HTTP_REFERER'];
+$referrer =  str_replace('http://', '', $_SERVER['HTTP_REFERER']);
 
 $data['method'] = $method;
 $data['referrer'] = $referrer;
@@ -34,7 +34,7 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
 } else {
     if (empty($ruleName) || empty($ruleText)) { 
         $data['status'] = "error";
-        $data['error']  = 'You must enter rule name and rule text';
+        $data['error'] = 'You must enter rule name and rule text';
     }
 }
 
