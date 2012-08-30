@@ -52,7 +52,7 @@ if($sendResult) {
     $data['status'] = "success";
 } else {
     $data['status'] = "error";
-    $data['error'] = "Send mail error";
+    $data['error'] = error_get_last();
 }
 
 echo json_encode($data);
