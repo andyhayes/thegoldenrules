@@ -101,12 +101,25 @@ function TheRulesCtrl($scope) {
     ]
 }
 
-var GoldenRules = {};
-GoldenRules.Analytics = function() {
-    
-    var external = {
-        
-    };
+function hideModal() {
+     $("#add-rule-modal").modal('hide');
+}
 
-    return external;
-};
+function bindAddRule() {
+    $(".modal-footer a:eq(0)").click(function() {
+        hideModal();        
+    });
+  
+    $(".modal-footer a:eq(1)").click(function() {
+        submitNewRule();
+    });
+  
+}
+
+function handlePostResponse(data) {
+    console.log(data);
+}
+
+function submitNewRule() {
+    $.post('send-email.php', $('#add-rule-form').serialize(), handlePostResponse);
+}

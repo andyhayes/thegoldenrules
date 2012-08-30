@@ -26,7 +26,9 @@ $message="Rule name: $ruleName \n Rule text: $ruleText \n\n Email: $ruleEmail";
 if ($_SERVER['REQUEST_METHOD'] == 'GET' || $_SERVER['HTTP_REFERER'] != 'www.thegoldenrules.co.uk') {
     $errors[]= "GET not supported/Invalide referrer";
 } else {
-    if (empty($ruleName) || empty($ruleText)) { $errors[] = 'You must enter rule name and rule text'};
+    if (empty($ruleName) || empty($ruleText)) { 
+        $errors[] = 'You must enter rule name and rule text';
+    }
 }
 
 if (!$errors) {
