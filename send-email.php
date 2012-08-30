@@ -22,7 +22,8 @@ $data['referrer'] = $referrer;
 $data['ruleName'] = $ruleName;
 $data['ruleText'] = $ruleText;
 
-global $valid=True;
+$valid=True;
+
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
@@ -41,7 +42,7 @@ if ($valid) {
     $sendResult=mail($to, $subject, $message, $from);
 } else {
     error_log("bbbbbb");
-    $sendResult=FALSE;
+    $sendResult= False;
 }
 
 // Check, if message sent to your email display message "We've recived your information"
