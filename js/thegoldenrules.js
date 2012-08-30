@@ -102,8 +102,12 @@ function TheRulesCtrl($scope) {
 }
 
 function hideModal() {
-     $("#add-rule-modal").modal('hide');
+    $(".modal-header .message").html("");
+    $(".modal-header .message").removeClass("error");
+    //$('#add-rule-form').reset();
+    $("#add-rule-modal").modal('hide');
 }
+
 
 function bindAddRule() {
     $(".modal-footer a:eq(0)").click(function() {
