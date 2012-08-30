@@ -22,7 +22,7 @@ $data['referrer'] = $referrer;
 $data['ruleName'] = $ruleName;
 $data['ruleText'] = $ruleText;
 
-$validationErrors=False;
+
 
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";

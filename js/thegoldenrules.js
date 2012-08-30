@@ -121,7 +121,7 @@ function handlePostResponse(data) {
     $(".modal-header .message").removeClass("error");
     if (data.status === 'success') {
          $(".modal-header .message").html("Success!");
-         setTimeout(hideModal, 2400);
+         setTimeout(hideModal, 2000);
          return;
     } 
     
