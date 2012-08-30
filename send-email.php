@@ -26,7 +26,7 @@ $valid = true;
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
-    valid = false;
+    $valid = false;
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         error_log("detected empty field");
