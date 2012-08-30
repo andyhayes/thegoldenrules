@@ -28,13 +28,14 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['error'] = "GET not supported/Invalid referrer";
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
+        error_log("detected empty field");
         $data['status'] = "error";
         $data['error'] = 'You must enter rule name and rule text';
     }
 }
 
 if (array_key_exists('error', $data)) {
-    $sendResult=false;
+    $sendResult=FALSE;
 } else {
     $sendResult=mail($to, $subject, $message, $from);
 }
