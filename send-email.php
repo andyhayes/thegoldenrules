@@ -22,22 +22,24 @@ $data['referrer'] = $referrer;
 $data['ruleName'] = $ruleName;
 $data['ruleText'] = $ruleText;
 
-
+$valid = true;
 if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     $data['status'] = "error";
     $data['error'] = "GET not supported/Invalid referrer";
+    valid = false;
 } else {
     if (!isset($ruleName) || empty($ruleName) || !isset($ruleText) || empty($ruleText)) { 
         error_log("detected empty field");
         $data['status'] = "error";
         $data['error'] = 'You must enter rule name and rule text';
+        $valid = false;
     }
 }
 
-if (array_key_exists('error', $data)) {
-    $sendResult=FALSE;
-} else {
+if ($valid) {
     $sendResult=mail($to, $subject, $message, $from);
+} else {
+    $sendResult=FALSE;
 }
 
 // Check, if message sent to your email display message "We've recived your information"
