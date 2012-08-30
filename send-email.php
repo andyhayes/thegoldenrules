@@ -6,13 +6,13 @@ $error = "";
 $data = array();
 
 // Contact subject
-$ruleName ="$rule-name"; 
+$ruleName=$_REQUEST['rule-name']; 
 
 // Details
-$ruleText="$rule-text";
+$ruleText=$_REQUEST['rule-text'];
 
 // Mail of sender
-$ruleEmail="$rule-email"; 
+$ruleEmail=$_REQUEST['rule-email'];
 
 // subject
 $subject='New golden rule!';
