@@ -118,9 +118,14 @@ function bindAddRule() {
 
 function handlePostResponse(data) {
     console.log(data);
-    if (data.status === 'error') {
-        $(".modal-header .message").html(data.error);
-    }
+    
+    if (data.status === 'success') {
+         $(".modal-header .message").html("Success!");
+         setTimeout(hideModal, 3);
+         return;
+    } 
+    
+    $(".modal-header .message").html(data.error);
 }
 
 function submitNewRule() {
