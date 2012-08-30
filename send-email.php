@@ -6,13 +6,13 @@ $error = "";
 $data = array();
 
 // Contact subject
-$ruleName=$_REQUEST['rule-name']; 
+$ruleName=$_POST['rule-name']; 
 
 // Details
-$ruleText=$_REQUEST['rule-text'];
+$ruleText=$_POST['rule-text'];
 
 // Mail of sender
-$ruleEmail=$_REQUEST['rule-email'];
+$ruleEmail=$_POST['rule-email'];
 
 // subject
 $subject='New golden rule!';
@@ -52,8 +52,7 @@ if($sendResult) {
     $data['status'] = "success";
 } else {
     $data['status'] = "error";
-    $err = error_get_last();
-    $data['error'] = $err['message'];
+    $data['error'] = "Sorry, there was an error sending mail. Try laterz";
 }
 
 echo json_encode($data);
