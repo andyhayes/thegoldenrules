@@ -39,7 +39,7 @@ if ($method == 'GET' || $referrer != 'www.thegoldenrules.co.uk') {
     }
 }
 
-if (array_key_exists('error', $data) {
+if (array_key_exists('error', $data)) {
     $sendResult=mail($to, $subject, $message);
 } else {
     $sendResult=false;
